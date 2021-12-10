@@ -3,10 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/drawable/food.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/activity_main.xml" value="0.26313405797101447" />
-        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/app_bar_main.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/app_bar_main.xml" value="0.23591549295774647" />
         <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/content_main.xml" value="0.22" />
+        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/fragment_drinks.xml" value="0.1" />
+        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/fragment_food.xml" value="0.1" />
+        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/fragment_gallery.xml" value="0.1921875" />
         <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/fragment_home.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/fragment_slideshow.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/list_item.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/layout/nav_header_main.xml" value="0.26313405797101447" />
+        <entry key="..\:/Users/SERGIO/AndroidStudioProjects/MyFoodEat/app/src/main/res/menu/activity_main_drawer.xml" value="0.35104166666666664" />
       </map>
     </option>
   </component>

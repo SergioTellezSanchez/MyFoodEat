@@ -1,0 +1,69 @@
+{
+  "menu": {
+    "food": [
+      {
+      "name": "hot-dog",
+      "description": "Super Hot-Dog",
+      "price": 1.5,
+      "cooking_time": 25
+    },
+      {
+        "name": "hamburger",
+        "description": "The great Burger",
+        "price": 3,
+        "cooking_time": 35
+      },
+      {
+        "name": "pizza",
+        "description": "The bro's Pizza",
+        "price": 4,
+        "cooking_time": 45
+      },
+      {
+        "name": "wings",
+        "description": "Flying Wings",
+        "price": 3.5,
+        "cooking_time": 40,
+        "sauce": [
+          "hot",
+          "medium",
+          "extra_spacy",
+          "parmesan"
+        ]
+      }
+    ],
+    "drinks": [
+      {
+      "name": "coke",
+      "description": "Coke",
+      "price": 1
+    },
+      {
+        "name": "sprite",
+        "description": "Sprite",
+        "price": 1
+      },
+      {
+        "name": "fanta",
+        "description": "Fanta",
+        "price": 1
+      },
+      {
+        "name": "pepsi",
+        "description": "Pepsi",
+        "price": 1
+      },
+      {
+        "name": "coffee",
+        "description": "Coffee",
+        "price": 2
+      },
+      {
+        "name": "water",
+        "description": "Water",
+        "price": 1
+      }
+    ]
+  }
+}
+

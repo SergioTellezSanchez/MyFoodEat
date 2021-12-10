@@ -1,10 +1,10 @@
-package com.example.myfoodeat.ui.slideshow
+package com.example.myfoodeat.ui.drinks
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class DrinksViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is slideshow Fragment"
