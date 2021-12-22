@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myfoodeat.R
 import com.example.myfoodeat.adapter.ItemAdapter
@@ -27,7 +29,7 @@ class DrinksFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         drinksViewModel =
             ViewModelProvider(this)[DrinksViewModel::class.java]
 
@@ -42,9 +44,21 @@ class DrinksFragment : Fragment() {
         val menu = if (menuString?.isEmpty() == true) null else
             Gson().fromJson(menuString, MenuModel::class.java)
 
+        fun onListItemClick(position: Int) {
+            if (menu != null) {
+                Toast.makeText(context, menu.menu.drinks[position].description + " added to your order",
+                    Toast.LENGTH_SHORT).show()
+            }
+        }
+
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
 
-        recyclerView.adapter = menu?.let { ItemAdapter(this, it, "drinks") }
+        val menuItemAdapter = menu?.let {
+            ItemAdapter(this,"drinks", resources, it
+            ) { position -> onListItemClick(position) }
+        }
+
+        recyclerView.adapter = menuItemAdapter
     }
 
     override fun onDestroyView() {

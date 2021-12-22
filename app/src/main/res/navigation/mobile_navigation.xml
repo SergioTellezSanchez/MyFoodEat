@@ -9,17 +9,48 @@
         android:id="@+id/nav_home"
         android:name="com.example.myfoodeat.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_food"
+            app:destination="@id/nav_food" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_drinks"
+            app:destination="@id/nav_drinks" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_food"
         android:name="com.example.myfoodeat.ui.food.FoodFragment"
         android:label="@string/menu_food"
-        tools:layout="@layout/fragment_food" />
+        tools:layout="@layout/fragment_food" >
+        <action
+            android:id="@+id/action_nav_food_to_nav_customize"
+            app:destination="@id/nav_customize" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_drinks"
         android:name="com.example.myfoodeat.ui.drinks.DrinksFragment"
         android:label="@string/menu_drinks"
-        tools:layout="@layout/fragment_drinks" />
+        tools:layout="@layout/fragment_drinks" >
+        <action
+            android:id="@+id/action_nav_drinks_to_nav_customize"
+            app:destination="@id/nav_customize" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_customize"
+        android:name="com.example.myfoodeat.ui.customize.CustomizeMenuItemFragment"
+        android:label="@string/menu_customize"
+        tools:layout="@layout/fragment_customize" >
+        <action
+            android:id="@+id/action_nav_customize_food_to_fragment_order"
+            app:destination="@id/fragment_order" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_order"
+        android:name="com.example.myfoodeat.ui.order.OrderFragment"
+        android:label="@string/cart"
+        tools:layout="@layout/fragment_order" />
 </navigation>
