@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myfoodeat.BuildConfig
 import com.example.myfoodeat.R
 import com.example.myfoodeat.adapter.CustomizeAdapter
 import com.example.myfoodeat.databinding.FragmentCustomizeBinding
@@ -30,11 +32,22 @@ class CustomizeMenuItemFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_customize)
 
-        val ingredients = OrderSingleton.ingredients.value
+        val itemSelected = OrderSingleton.itemSelected.value
 
-        val customizeAdapter = ingredients?.let {
+        val identifier =
+            resources.getIdentifier(itemSelected?.id, "drawable", BuildConfig.APPLICATION_ID)
+        binding.customizeFoodImage.setImageResource(identifier)
+
+        binding.customizeButton.setOnClickListener {
+            if (itemSelected != null) {
+                OrderSingleton.addToOrder(itemSelected)
+            }
+            findNavController().navigate(R.id.action_nav_customize_food_to_fragment_order)
+        }
+
+        val customizeAdapter = itemSelected?.ingredients?.let {
             CustomizeAdapter(
                 this, resources, it
             )

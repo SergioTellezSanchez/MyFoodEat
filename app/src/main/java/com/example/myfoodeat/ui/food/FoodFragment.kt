@@ -38,23 +38,23 @@ class FoodFragment : Fragment() {
         val menuString = context?.let { loadJson(resources) }
         val menu = if (menuString?.isEmpty() == true) null else
             Gson().fromJson(menuString, MenuModel::class.java)
+        val foodMenu = menu?.menu?.filter { item -> item.type == "food" }
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
 
         fun onListItemClick(position: Int) {
             if (menu != null) {
-                val ingredients = menu.menu.food[position].ingredients
-                OrderSingleton.setIngredients(ingredients)
+                foodMenu?.get(position)?.let { OrderSingleton.setItemSelected(it) }
+                foodMenu?.get(position)?.let { it.selected = true }
                 findNavController().navigate(R.id.action_nav_food_to_nav_customize)
             }
         }
 
-        val menuItemAdapter = menu?.let {
+        val menuItemAdapter = foodMenu?.let {
             ItemAdapter(
-                this, "food", resources, it
+                this, resources, it
             ) { position -> onListItemClick(position) }
         }
-
         recyclerView.adapter = menuItemAdapter
     }
 

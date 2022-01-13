@@ -18,4 +18,7 @@
     <string name="dollar_sign">$  %s</string>
     <string name="item_added">Item added to order</string>
     <string name="menu_customize">Customize</string>
+    <string name="add_to_order">Add to Order</string>
+    <string name="order_total">Total $ %s</string>
+    <string name="place_order">Place Order</string>
 </resources>

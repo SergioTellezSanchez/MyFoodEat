@@ -14,6 +14,7 @@ import com.example.myfoodeat.adapter.ItemAdapter
 import com.example.myfoodeat.data.loadJson
 import com.example.myfoodeat.databinding.FragmentDrinksBinding
 import com.example.myfoodeat.model.MenuModel
+import com.example.myfoodeat.singleton.OrderSingleton
 import com.google.gson.Gson
 
 class DrinksFragment : Fragment() {
@@ -43,21 +44,27 @@ class DrinksFragment : Fragment() {
         val menuString = context?.let { loadJson(resources) }
         val menu = if (menuString?.isEmpty() == true) null else
             Gson().fromJson(menuString, MenuModel::class.java)
-
-        fun onListItemClick(position: Int) {
-            if (menu != null) {
-                Toast.makeText(context, menu.menu.drinks[position].description + " added to your order",
-                    Toast.LENGTH_SHORT).show()
-            }
-        }
+        val drinksMenu = menu?.menu?.filter { item -> item.type == "drink" }
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
 
-        val menuItemAdapter = menu?.let {
-            ItemAdapter(this,"drinks", resources, it
-            ) { position -> onListItemClick(position) }
+        fun onListItemClick(position: Int) {
+            if (menu != null) {
+                drinksMenu?.get(position)?.let { it.selected = true }
+                drinksMenu?.get(position)?.let { OrderSingleton.addToOrder(it) }
+                Toast.makeText(
+                    context, drinksMenu?.get(position)?.description + " added to your order",
+                    Toast.LENGTH_SHORT
+                ).show()
+                findNavController().navigate(R.id.action_nav_drinks_to_fragment_order)
+            }
         }
 
+        val menuItemAdapter = drinksMenu?.let {
+            ItemAdapter(
+                this, resources, it
+            ) { position -> onListItemClick(position) }
+        }
         recyclerView.adapter = menuItemAdapter
     }
 

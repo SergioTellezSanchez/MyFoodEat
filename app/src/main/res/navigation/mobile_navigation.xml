@@ -34,8 +34,8 @@
         android:label="@string/menu_drinks"
         tools:layout="@layout/fragment_drinks" >
         <action
-            android:id="@+id/action_nav_drinks_to_nav_customize"
-            app:destination="@id/nav_customize" />
+            android:id="@+id/action_nav_drinks_to_fragment_order"
+            app:destination="@id/fragment_order" />
     </fragment>
 
     <fragment

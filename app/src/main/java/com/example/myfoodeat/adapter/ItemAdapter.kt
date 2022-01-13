@@ -10,11 +10,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myfoodeat.BuildConfig
 import com.example.myfoodeat.R
-import com.example.myfoodeat.model.MenuModel
+import com.example.myfoodeat.model.ItemDetails
 
 class ItemAdapter(
-    private val context: Fragment, private val menuItemType: String,
-    private val resources: Resources, private val menuModel: MenuModel,
+    private val context: Fragment,
+    private val resources: Resources,
+    private val itemDetails: List<ItemDetails>,
     private val onItemClicked: (position: Int) -> Unit
 ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
@@ -41,27 +42,13 @@ class ItemAdapter(
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val item =
-            when (menuItemType) {
-                "food" -> menuModel.menu.food[position]
-                "drinks" -> menuModel.menu.drinks[position]
-                else -> null
-            }
-
-        if (item != null) {
-            holder.textDescription.text = item.description
-            holder.textPrice.text = context.getString(R.string.dollar_sign, item.price.toString())
-            val identifier =
-                resources.getIdentifier(item.id, "drawable", BuildConfig.APPLICATION_ID)
-            holder.productImage.setImageResource(identifier)
-        }
+        val item = itemDetails[position]
+        holder.textDescription.text = item.description
+        holder.textPrice.text = context.getString(R.string.dollar_sign, item.price.toString())
+        val identifier =
+            resources.getIdentifier(item.id, "drawable", BuildConfig.APPLICATION_ID)
+        holder.productImage.setImageResource(identifier)
     }
 
-    override fun getItemCount(): Int {
-        return when (menuItemType) {
-            "food" -> menuModel.menu.food.size
-            "drinks" -> menuModel.menu.drinks.size
-            else -> 0
-        }
-    }
+    override fun getItemCount(): Int = itemDetails.size
 }

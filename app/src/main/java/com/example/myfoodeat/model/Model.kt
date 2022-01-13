@@ -2,58 +2,41 @@ package com.example.myfoodeat.model
 
 import com.google.gson.annotations.SerializedName
 
+open class MenuItem(
+    val id: String,
+    val type: String,
+    val description: String,
+    val price: Double,
+    var selected: Boolean
+)
+
 data class MenuModel(
     @SerializedName("menu")
-    val menu: MenuDetails
+    val menu: ArrayList<ItemDetails> = ArrayList(),
 )
 
-data class MenuDetails(
-    @SerializedName("food")
-    val food: ArrayList<FoodDetails> = ArrayList(),
-    @SerializedName("drinks")
-    val drinks: ArrayList<DrinksDetails> = ArrayList(),
-)
-
-open class MenuItem  (
-    val id: String,
-    val description: String,
-    val price: Double
-)
-
-class FoodDetails (
+class ItemDetails(
     id: String,
+    type: String,
     description: String,
     price: Double,
+    selected: Boolean,
     @SerializedName("cooking_time")
     val cooking_time: Int,
-    @SerializedName("sauce")
-    val sauce: ArrayList<String>,
     @SerializedName("ingredients")
     val ingredients: ArrayList<IngredientsModel>
-): MenuItem(id, description, price)
+) : MenuItem(id, type, description, price, selected)
 
 class IngredientsModel(
     id: String,
+    type: String,
     description: String,
-    price: Double
-): MenuItem(id, description, price)
+    price: Double,
+    selected: Boolean
+) : MenuItem(id, type, description, price, selected)
 
-class DrinksDetails(
-    id: String,
-    description: String,
-    price: Double
-): MenuItem(id, description, price)
-
-
-//data class OrderModel(
-//    @SerializedName("order")
-//    val order: ArrayList<OrderDetails> = ArrayList()
-//)
-//
-//class OrderDetails(
-//    id: String,
-//    food: ArrayList<FoodDetails>,
-//    drinks: ArrayList<DrinksDetails>,
-//    quantity: Int,
-//    total: Double
-//)
+class OrderDetails(
+    var id: Int,
+    var items: ArrayList<ItemDetails>,
+    var total: Double
+)

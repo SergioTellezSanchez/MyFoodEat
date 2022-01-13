@@ -1,393 +1,404 @@
 {
-  "menu": {
-    "food": [
-      {
-        "id": "hot_dog",
-        "description": "Super Hot-Dog",
-        "price": 1.5,
-        "cooking_time": 25,
-        "ingredients": [
-          {
-            "id": "tomato",
-            "price": 1,
-            "description": "Tomato"
-          },
-          {
-            "id": "bacon",
-            "price": 1,
-            "description": "Bacon"
-          },
-          {
-            "id": "onion",
-            "price": 1,
-            "description": "Onion"
-          },
-          {
-            "id": "jalapeño",
-            "price": 1,
-            "description": "Jalapeño"
-          }
-        ]
-      },
-      {
-        "id": "hamburger",
-        "description": "The great Burger",
-        "price": 3,
-        "cooking_time": 35,
-        "ingredients": [
-          {
-            "id": "tomato",
-            "price": 1,
-            "description": "Tomato"
-          },
-          {
-            "id": "lettuce",
-            "price": 1,
-            "description": "Lettuce"
-          },
-          {
-            "id": "bacon",
-            "price": 1,
-            "description": "Bacon"
-          },
-          {
-            "id": "mushroom",
-            "price": 1,
-            "description": "Mushroom"
-          },
-          {
-            "id": "avocado",
-            "price": 1,
-            "description": "Avocado"
-          },
-          {
-            "id": "onion",
-            "price": 1,
-            "description": "Onion"
-          },
-          {
-            "id": "jalapeño",
-            "price": 1,
-            "description": "Jalapeño"
-          }
-        ]
-      },
-      {
-        "id": "pizza",
-        "description": "The bro's Pizza",
-        "price": 6,
-        "cooking_time": 45,
-        "ingredients": [
-          {
-            "id": "meat",
-            "price": 1,
-            "description": "Meat"
-          },
-          {
-            "id": "ham",
-            "price": 1,
-            "description": "Ham"
-          },
-          {
-            "id": "chicken",
-            "price": 1,
-            "description": "Chicken"
-          },
-          {
-            "id": "bacon",
-            "price": 1,
-            "description": "Bacon"
-          },
-          {
-            "id": "mushroom",
-            "price": 1,
-            "description": "Mushroom"
-          },
-          {
-            "id": "peppers",
-            "price": 1,
-            "description": "Peppers"
-          },
-          {
-            "id": "onion",
-            "price": 1,
-            "description": "Onion"
-          },
-          {
-            "id": "extra_cheese",
-            "price": 1,
-            "description": "Extra Cheese"
-          },
-          {
-            "id": "black_olives",
-            "price": 1,
-            "description": "Black Olives"
-          },
-          {
-            "id": "olives",
-            "price": 1,
-            "description": "Olives"
-          },
-          {
-            "id": "jalapeño",
-            "price": 1,
-            "description": "Jalapeño"
-          }
-        ]
-      },
-      {
-        "id": "salad",
-        "description": "Cesar's best Salad",
-        "price": 3.5,
-        "cooking_time": 45,
-        "ingredients": [
-          {
-            "id": "meat",
-            "price": 1,
-            "description": "Meat"
-          },
-          {
-            "id": "chicken",
-            "price": 1,
-            "description": "Chicken"
-          },
-          {
-            "id": "bacon",
-            "price": 1,
-            "description": "Bacon"
-          },
-          {
-            "id": "mushroom",
-            "price": 1,
-            "description": "Mushroom"
-          },
-          {
-            "id": "peppers",
-            "price": 1,
-            "description": "Peppers"
-          },
-          {
-            "id": "onion",
-            "price": 1,
-            "description": "Onion"
-          },
-          {
-            "id": "cheese",
-            "price": 1,
-            "description": "Cheese"
-          },
-          {
-            "id": "olives",
-            "price": 1,
-            "description": "Olives"
-          },
-          {
-            "id": "black_olives",
-            "price": 1,
-            "description": "Black Olives"
-          },
-          {
-            "id": "jalapeño",
-            "price": 1,
-            "description": "Jalapeño"
-          }
-        ]
-      },
-      {
-        "id": "sandwich",
-        "description": "Club Sandwich",
-        "price": 2.5,
-        "cooking_time": 45,
-        "ingredients": [
-          {
-            "id": "tomato",
-            "price": 1,
-            "description": "Tomato"
-          },
-          {
-            "id": "lettuce",
-            "price": 1,
-            "description": "Lettuce"
-          },
-          {
-            "id": "bacon",
-            "price": 1,
-            "description": "Bacon"
-          },
-          {
-            "id": "mushroom",
-            "price": 1,
-            "description": "Mushroom"
-          },
-          {
-            "id": "avocado",
-            "price": 1,
-            "description": "Avocado"
-          },
-          {
-            "id": "onion",
-            "price": 1,
-            "description": "Onion"
-          },
-          {
-            "id": "chicken",
-            "price": 1,
-            "description": "Chicken"
-          },
-          {
-            "id": "ham",
-            "price": 1,
-            "description": "Ham"
-          },
-          {
-            "id": "jalapeño",
-            "price": 1,
-            "description": "Jalapeño"
-          }
-        ]
-      },
-      {
-        "id": "wraps",
-        "description": "Yumi Wrap",
-        "price": 2.5,
-        "cooking_time": 45,
-        "ingredients": [
-          {
-            "id": "tomato",
-            "price": 1,
-            "description": "Tomato"
-          },
-          {
-            "id": "bacon",
-            "price": 1,
-            "description": "Bacon"
-          },
-          {
-            "id": "mushroom",
-            "price": 1,
-            "description": "Mushroom"
-          },
-          {
-            "id": "avocado",
-            "price": 1,
-            "description": "Avocado"
-          },
-          {
-            "id": "onion",
-            "price": 1,
-            "description": "Onion"
-          },
-          {
-            "id": "chicken",
-            "price": 1,
-            "description": "Chicken"
-          },
-          {
-            "id": "ham",
-            "price": 1,
-            "description": "Ham"
-          },
-          {
-            "id": "jalapeño",
-            "price": 1,
-            "description": "Jalapeño"
-          }
-        ]
-      },
-      {
-        "id": "boneless",
-        "description": "Boneless and no more",
-        "price": 4,
-        "cooking_time": 45,
-        "sauces": [
-          {
-            "id": "hot",
-            "price": 1,
-            "description": "Hot"
-          },
-          {
-            "id": "medium",
-            "price": 1,
-            "description": "Medium"
-          },
-          {
-            "id": "extra_spacy",
-            "price": 1,
-            "description": "Extra Spacy"
-          },
-          {
-            "id": "parmesan",
-            "price": 1,
-            "description": "Parmesan"
-          }
-        ]
-      },
-      {
-        "id": "wings",
-        "description": "Flying Wings",
-        "price": 3.5,
-        "cooking_time": 40,
-        "sauces": [
-          {
-            "id": "hot",
-            "price": 1,
-            "description": "Hot"
-          },
-          {
-            "id": "medium",
-            "price": 1,
-            "description": "Medium"
-          },
-          {
-            "id": "extra_spacy",
-            "price": 1,
-            "description": "Extra Spacy"
-          },
-          {
-            "id": "parmesan",
-            "price": 1,
-            "description": "Parmesan"
-          }
-        ]
-      }
-    ],
-    "drinks": [
-      {
-        "id": "coke",
-        "description": "Coke",
-        "price": 1
-      },
-      {
-        "id": "sprite",
-        "description": "Sprite",
-        "price": 1
-      },
-      {
-        "id": "fanta",
-        "description": "Fanta",
-        "price": 1
-      },
-      {
-        "id": "shake",
-        "description": "Shake",
-        "price": 2.5
-      },
-      {
-        "id": "beer",
-        "description": "Beer",
-        "price": 2
-      },
-      {
-        "id": "tea",
-        "description": "Tea",
-        "price": 2
-      },
-      {
-        "id": "water",
-        "description": "Water",
-        "price": 1
-      }
-    ]
-  }
+  "menu": [
+    {
+      "id": "hot_dog",
+      "type": "food",
+      "description": "Super Hot-Dog",
+      "price": 1.5,
+      "cooking_time": 25,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "price": 1,
+          "description": "Tomato"
+        },
+        {
+          "id": "bacon",
+          "price": 1,
+          "description": "Bacon"
+        },
+        {
+          "id": "onion",
+          "price": 1,
+          "description": "Onion"
+        },
+        {
+          "id": "jalapeño",
+          "price": 1,
+          "description": "Jalapeño"
+        }
+      ]
+    },
+    {
+      "id": "hamburger",
+      "type": "food",
+      "description": "The great Burger",
+      "price": 3,
+      "cooking_time": 35,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "price": 1,
+          "description": "Tomato"
+        },
+        {
+          "id": "lettuce",
+          "price": 1,
+          "description": "Lettuce"
+        },
+        {
+          "id": "bacon",
+          "price": 1,
+          "description": "Bacon"
+        },
+        {
+          "id": "mushroom",
+          "price": 1,
+          "description": "Mushroom"
+        },
+        {
+          "id": "avocado",
+          "price": 1,
+          "description": "Avocado"
+        },
+        {
+          "id": "onion",
+          "price": 1,
+          "description": "Onion"
+        },
+        {
+          "id": "jalapeño",
+          "price": 1,
+          "description": "Jalapeño"
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "type": "food",
+      "description": "The bro's Pizza",
+      "price": 6,
+      "cooking_time": 45,
+      "ingredients": [
+        {
+          "id": "meat",
+          "price": 1,
+          "description": "Meat"
+        },
+        {
+          "id": "ham",
+          "price": 1,
+          "description": "Ham"
+        },
+        {
+          "id": "chicken",
+          "price": 1,
+          "description": "Chicken"
+        },
+        {
+          "id": "bacon",
+          "price": 1,
+          "description": "Bacon"
+        },
+        {
+          "id": "mushroom",
+          "price": 1,
+          "description": "Mushroom"
+        },
+        {
+          "id": "peppers",
+          "price": 1,
+          "description": "Peppers"
+        },
+        {
+          "id": "onion",
+          "price": 1,
+          "description": "Onion"
+        },
+        {
+          "id": "extra_cheese",
+          "price": 1,
+          "description": "Extra Cheese"
+        },
+        {
+          "id": "black_olives",
+          "price": 1,
+          "description": "Black Olives"
+        },
+        {
+          "id": "olives",
+          "price": 1,
+          "description": "Olives"
+        },
+        {
+          "id": "jalapeño",
+          "price": 1,
+          "description": "Jalapeño"
+        }
+      ]
+    },
+    {
+      "id": "salad",
+      "type": "food",
+      "description": "Cesar's best Salad",
+      "price": 3.5,
+      "cooking_time": 45,
+      "ingredients": [
+        {
+          "id": "meat",
+          "price": 1,
+          "description": "Meat"
+        },
+        {
+          "id": "chicken",
+          "price": 1,
+          "description": "Chicken"
+        },
+        {
+          "id": "bacon",
+          "price": 1,
+          "description": "Bacon"
+        },
+        {
+          "id": "mushroom",
+          "price": 1,
+          "description": "Mushroom"
+        },
+        {
+          "id": "peppers",
+          "price": 1,
+          "description": "Peppers"
+        },
+        {
+          "id": "onion",
+          "price": 1,
+          "description": "Onion"
+        },
+        {
+          "id": "cheese",
+          "price": 1,
+          "description": "Cheese"
+        },
+        {
+          "id": "olives",
+          "price": 1,
+          "description": "Olives"
+        },
+        {
+          "id": "black_olives",
+          "price": 1,
+          "description": "Black Olives"
+        },
+        {
+          "id": "jalapeño",
+          "price": 1,
+          "description": "Jalapeño"
+        }
+      ]
+    },
+    {
+      "id": "sandwich",
+      "type": "food",
+      "description": "Club Sandwich",
+      "price": 2.5,
+      "cooking_time": 45,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "price": 1,
+          "description": "Tomato"
+        },
+        {
+          "id": "lettuce",
+          "price": 1,
+          "description": "Lettuce"
+        },
+        {
+          "id": "bacon",
+          "price": 1,
+          "description": "Bacon"
+        },
+        {
+          "id": "mushroom",
+          "price": 1,
+          "description": "Mushroom"
+        },
+        {
+          "id": "avocado",
+          "price": 1,
+          "description": "Avocado"
+        },
+        {
+          "id": "onion",
+          "price": 1,
+          "description": "Onion"
+        },
+        {
+          "id": "chicken",
+          "price": 1,
+          "description": "Chicken"
+        },
+        {
+          "id": "ham",
+          "price": 1,
+          "description": "Ham"
+        },
+        {
+          "id": "jalapeño",
+          "price": 1,
+          "description": "Jalapeño"
+        }
+      ]
+    },
+    {
+      "id": "wraps",
+      "type": "food",
+      "description": "Yumi Wrap",
+      "price": 2.5,
+      "cooking_time": 45,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "price": 1,
+          "description": "Tomato"
+        },
+        {
+          "id": "bacon",
+          "price": 1,
+          "description": "Bacon"
+        },
+        {
+          "id": "mushroom",
+          "price": 1,
+          "description": "Mushroom"
+        },
+        {
+          "id": "avocado",
+          "price": 1,
+          "description": "Avocado"
+        },
+        {
+          "id": "onion",
+          "price": 1,
+          "description": "Onion"
+        },
+        {
+          "id": "chicken",
+          "price": 1,
+          "description": "Chicken"
+        },
+        {
+          "id": "ham",
+          "price": 1,
+          "description": "Ham"
+        },
+        {
+          "id": "jalapeño",
+          "price": 1,
+          "description": "Jalapeño"
+        }
+      ]
+    },
+    {
+      "id": "boneless",
+      "type": "food",
+      "description": "Boneless and no more",
+      "price": 4,
+      "cooking_time": 45,
+      "ingredients": [
+        {
+          "id": "hot",
+          "price": 1,
+          "description": "Hot"
+        },
+        {
+          "id": "medium",
+          "price": 1,
+          "description": "Medium"
+        },
+        {
+          "id": "extra_spacy",
+          "price": 1,
+          "description": "Extra Spacy"
+        },
+        {
+          "id": "parmesan",
+          "price": 1,
+          "description": "Parmesan"
+        }
+      ]
+    },
+    {
+      "id": "wings",
+      "type": "food",
+      "description": "Flying Wings",
+      "price": 3.5,
+      "cooking_time": 40,
+      "ingredients": [
+        {
+          "id": "hot",
+          "price": 1,
+          "description": "Hot"
+        },
+        {
+          "id": "medium",
+          "price": 1,
+          "description": "Medium"
+        },
+        {
+          "id": "extra_spacy",
+          "price": 1,
+          "description": "Extra Spacy"
+        },
+        {
+          "id": "parmesan",
+          "price": 1,
+          "description": "Parmesan"
+        }
+      ]
+    },
+    {
+      "id": "coke",
+      "type": "drink",
+      "description": "Coke",
+      "price": 1
+    },
+    {
+      "id": "sprite",
+      "type": "drink",
+      "description": "Sprite",
+      "price": 1
+    },
+    {
+      "id": "fanta",
+      "type": "drink",
+      "description": "Fanta",
+      "price": 1
+    },
+    {
+      "id": "shake",
+      "type": "drink",
+      "description": "Shake",
+      "price": 2.5
+    },
+    {
+      "id": "beer",
+      "type": "drink",
+      "description": "Beer",
+      "price": 2
+    },
+    {
+      "id": "tea",
+      "type": "drink",
+      "description": "Tea",
+      "price": 2
+    },
+    {
+      "id": "water",
+      "type": "drink",
+      "description": "Water",
+      "price": 1
+    }
+  ]
 }
 

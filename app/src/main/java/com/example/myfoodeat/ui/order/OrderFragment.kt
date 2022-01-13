@@ -4,11 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myfoodeat.R
+import com.example.myfoodeat.adapter.OrderAdapter
 import com.example.myfoodeat.databinding.FragmentOrderBinding
+import com.example.myfoodeat.singleton.OrderSingleton
+import kotlinx.android.synthetic.main.fragment_order.*
 
 class OrderFragment : Fragment() {
 
@@ -24,7 +28,6 @@ class OrderFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         orderViewModel = ViewModelProvider(this)[OrderViewModel::class.java]
-
         _binding = FragmentOrderBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -32,14 +35,17 @@ class OrderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_order)
+        val order = OrderSingleton.order
 
-//        val order: MenuModel = MenuModel(
-//            MenuDetails()
-//        )
-//
-//        recyclerView.adapter =
-//            ItemAdapter(this,  "order", resources, order)
+        order_total.text = context?.getString(R.string.order_total, order.total.toString())
+
+        val orderItemAdapter = OrderAdapter(this, resources, order)
+        recyclerView.adapter = orderItemAdapter
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
