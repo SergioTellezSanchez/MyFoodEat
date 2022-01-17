@@ -12,6 +12,7 @@ import com.example.myfoodeat.BuildConfig
 import com.example.myfoodeat.R
 import com.example.myfoodeat.adapter.CustomizeAdapter
 import com.example.myfoodeat.databinding.FragmentCustomizeBinding
+import com.example.myfoodeat.model.IngredientsModel
 import com.example.myfoodeat.singleton.OrderSingleton
 
 class CustomizeMenuItemFragment : Fragment() {
@@ -34,7 +35,7 @@ class CustomizeMenuItemFragment : Fragment() {
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_customize)
 
-        val itemSelected = OrderSingleton.itemSelected.value
+        val itemSelected = customizeViewModel.itemSelected
 
         val identifier =
             resources.getIdentifier(itemSelected?.id, "drawable", BuildConfig.APPLICATION_ID)
@@ -47,7 +48,9 @@ class CustomizeMenuItemFragment : Fragment() {
             findNavController().navigate(R.id.action_nav_customize_food_to_fragment_order)
         }
 
-        val customizeAdapter = itemSelected?.ingredients?.let {
+        val ingredients: ArrayList<IngredientsModel>? = customizeViewModel.ingredients
+
+        val customizeAdapter = ingredients?.let {
             CustomizeAdapter(
                 this, resources, it
             )

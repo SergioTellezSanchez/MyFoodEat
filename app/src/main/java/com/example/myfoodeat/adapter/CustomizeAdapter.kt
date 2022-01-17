@@ -4,6 +4,7 @@ import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -18,11 +19,12 @@ class CustomizeAdapter(
     private val ingredients: ArrayList<IngredientsModel>
 ) : RecyclerView.Adapter<CustomizeAdapter.CustomizeViewHolder>() {
 
-    class CustomizeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class CustomizeViewHolder(view: View) :
+        RecyclerView.ViewHolder(view) {
         val textDescription: TextView = view.findViewById(R.id.item_description)
         val textPrice: TextView = view.findViewById(R.id.text_price)
         val productImage: ImageView = view.findViewById(R.id.product_image)
-//        val onClickAction: CheckBox = view.findViewById(R.id.checkBox)
+        val checkBox: CheckBox = view.findViewById(R.id.checkBox)
     }
 
     override fun onCreateViewHolder(
@@ -35,15 +37,17 @@ class CustomizeAdapter(
     }
 
     override fun onBindViewHolder(holder: CustomizeViewHolder, position: Int) {
-        val item = ingredients[position]
-        holder.textDescription.text = item.description
-        holder.textPrice.text = context.getString(R.string.dollar_sign, item.price.toString())
+        val ingredient: IngredientsModel = ingredients[position]
+        holder.textDescription.text = ingredient.description
+        holder.textPrice.text = context.getString(R.string.dollar_sign, ingredient.price.toString())
         val identifier =
-            resources.getIdentifier(item.id, "drawable", BuildConfig.APPLICATION_ID)
+            resources.getIdentifier(ingredient.id, "drawable", BuildConfig.APPLICATION_ID)
         holder.productImage.setImageResource(identifier)
+        holder.checkBox.isChecked = ingredient.selected
+        holder.checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
+            ingredient.selected = isChecked
+        }
     }
 
-    override fun getItemCount(): Int {
-        return ingredients.size
-    }
+    override fun getItemCount(): Int = ingredients.size
 }

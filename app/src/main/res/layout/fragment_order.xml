@@ -9,7 +9,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_order"
         android:layout_width="match_parent"
-        android:layout_height="590dp"
+        android:layout_height="530dp"
         android:scrollbars="vertical"
         app:layoutManager="LinearLayoutManager" />
 

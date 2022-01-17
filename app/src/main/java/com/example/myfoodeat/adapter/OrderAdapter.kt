@@ -16,21 +16,11 @@ class OrderAdapter(
     private val context: Fragment,
     private val resources: Resources,
     private val order: OrderDetails,
-//    private val onItemClicked: (position: Int) -> Unit
 ) : RecyclerView.Adapter<OrderAdapter.ItemViewHolder>() {
     class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textDescription: TextView = view.findViewById(R.id.item_description)
         val textPrice: TextView = view.findViewById(R.id.text_price)
         val productImage: ImageView = view.findViewById(R.id.product_image)
-
-//        init {
-//            itemView.setOnClickListener(this)
-//        }
-//
-//        override fun onClick(v: View?) {
-//            val position = adapterPosition
-//            onItemClicked(position)
-//        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

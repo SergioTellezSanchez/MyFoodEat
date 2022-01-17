@@ -39,7 +39,7 @@ object OrderSingleton {
         return total
     }
 
-//    fun clear() {
-//        itemsInTheOrder = ArrayList()
-//    }
+    fun clear() {
+        itemsInTheOrder = ArrayList()
+    }
 }

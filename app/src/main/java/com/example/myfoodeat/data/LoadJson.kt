@@ -16,11 +16,9 @@ fun loadJson(resources: Resources): String {
         input.read(buffer)
         jsonString = String(buffer)
         return jsonString
-    }
-    catch (ex: Exception) {
+    } catch (ex: Exception) {
         Log.e("Error", "$ex")
-    }
-    finally {
+    } finally {
         input?.close()
     }
     return ""
