@@ -38,5 +38,6 @@ class IngredientsModel(
 class OrderDetails(
     var id: Int,
     var items: ArrayList<ItemDetails>,
+    var cookingTime: Int,
     var total: Double
 )

@@ -7,9 +7,13 @@ import com.example.myfoodeat.model.OrderDetails
 object OrderSingleton {
     val itemSelected = MutableLiveData<ItemDetails>()
     var itemsInTheOrder: ArrayList<ItemDetails> = ArrayList()
+    private var total: Double = 0.00
+    var cookingTime: Int = 0
+
     var order = OrderDetails(
         id = 0,
         items = itemsInTheOrder,
+        cookingTime = cookingTime,
         total = 0.00
     )
 
@@ -22,12 +26,22 @@ object OrderSingleton {
         order = OrderDetails(
             id = 1,
             items = itemsInTheOrder,
+            cookingTime = calculateCookingTime(itemsInTheOrder),
             total = calculateTotal(itemsInTheOrder)
         )
     }
 
+    private fun calculateCookingTime(itemsInTheOrder: ArrayList<ItemDetails>?): Int {
+        if (itemsInTheOrder != null) {
+            val itemsSelected = itemsInTheOrder.filter { item -> item.selected }
+            cookingTime = itemsSelected.maxOf {
+                it.cooking_time
+            }
+        }
+        return cookingTime
+    }
+
     private fun calculateTotal(itemsInTheOrder: ArrayList<ItemDetails>?): Double {
-        var total = 0.00
         if (itemsInTheOrder != null) {
             var i = 0
             val itemsSelected = itemsInTheOrder.filter { item -> item.selected }
@@ -39,7 +53,7 @@ object OrderSingleton {
         return total
     }
 
-    fun clear() {
-        itemsInTheOrder = ArrayList()
-    }
+//    fun clear() {
+//        itemsInTheOrder = ArrayList()
+//    }
 }

@@ -13,7 +13,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:scaleType="centerCrop"
-        tools:src="@tools:sample/avatars" />
+        tools:src="@tools:sample/avatars"
+        android:contentDescription="@string/photo_of_the_item" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_customize"
@@ -26,7 +27,7 @@
     <Button
         android:id="@+id/customize_button"
         android:layout_width="326dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@id/recycler_view_customize"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"

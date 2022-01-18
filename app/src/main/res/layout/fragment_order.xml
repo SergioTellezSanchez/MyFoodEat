@@ -30,7 +30,7 @@
     <Button
         android:id="@+id/place_order_button"
         android:layout_width="326dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@id/order_total"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"

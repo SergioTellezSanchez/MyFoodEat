@@ -21,4 +21,10 @@
     <string name="add_to_order">Add to Order</string>
     <string name="order_total">Total $ %s</string>
     <string name="place_order">Place Order</string>
+    <string name="your_food_is_ready">Your food is ready!</string>
+    <string name="food_ready_logo">Food ready logo</string>
+    <string name="take_a_photo">Take a photo</string>
+    <string name="photo_of_the_item">Photo of the item</string>
+    <string name="my_food_eat_logo">My food eat logo</string>
+    <string name="loading_image">Loading image</string>
 </resources>
